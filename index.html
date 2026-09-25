@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake | Adil Slim</title>
+  <meta name="description" content="A classic Snake game built with HTML, CSS and vanilla JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <a class="back" href="https://adil-s1.github.io">← Portfolio</a>
+      <h1>Snake</h1>
+      <div class="scores">
+        <div><span>Score</span><strong id="score">0</strong></div>
+        <div><span>Best</span><strong id="best">0</strong></div>
+      </div>
+    </header>
+
+    <div class="board">
+      <canvas id="game" width="400" height="400" aria-label="Snake game board"></canvas>
+
+      <!-- Start / pause / game-over screen -->
+      <div class="overlay" id="overlay">
+        <h2 id="overlayTitle">Ready?</h2>
+        <p id="overlayText">Eat the food, grow longer, and don't hit the walls or yourself.</p>
+        <button class="btn" id="startBtn">Start game</button>
+        <p class="hint mono">Arrow keys / WASD to move · Space to pause</p>
+      </div>
+    </div>
+
+    <!-- On-screen controls for phones -->
+    <div class="pad" aria-label="Touch controls">
+      <button data-dir="up" aria-label="Up">▲</button>
+      <button data-dir="left" aria-label="Left">◀</button>
+      <button data-dir="down" aria-label="Down">▼</button>
+      <button data-dir="right" aria-label="Right">▶</button>
+    </div>
+
+    <footer class="foot mono">Built with HTML, CSS &amp; vanilla JavaScript · <a href="https://github.com/adil-s1/snake-game">View the code</a></footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
